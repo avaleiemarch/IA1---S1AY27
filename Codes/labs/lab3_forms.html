@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head> <!--The head element provides information and instructions to the browser about the document. -->
+        <title>Forms - September 26, 2026</title> <!--The content of the title element appear in the browser title bar. -->
+    </head>
+    <body>
+        <form name="f1" action="test.aspx" method="get,post"> <!--when user presses submit button only one option at a time once program works without errors ("get" adds everything to the url,"post" sends a file so its more secure for the data)-->
+            <fieldset>
+            <legend> Student Info:</legend>
+            <label>Student name :</label>
+            <input type="text" name="tb1" maxlength="6" minlength="3" placeholder="type your fullname" required/> <br/> <br/>
+
+            <label>Student ID# : </label>
+            <input type="number" name="tb2" maxlength="6" minlength="3" placeholder="type your ID#" required/> <br/> <br/>
+
+            <label>Student Password : </label>
+            <input type="password" name="tb3" placeholder="type your password" /> <br/> <br/>
+
+            <label>Student Email : </label>
+            <input type="email" name="tb4" placeholder="type your email" /> <br/> <br/>
+
+            <label>Student DOB: </label>
+            <input type="date" name="tb5" /> <br/> <br/>
+
+            <input type="month" name="tb5" /> 
+            <input type="time" name="tb5" /> 
+            <input type="tel" name="tb5" />
+            <input type="file" name="tb5" /> <br/> <br/>
+
+            <label>Student Gender: </label>
+            <input type="radio" name="tb6" /> Male
+            <input type="radio" name="tb6" checked/> Female <br/> <br/> 
+            </fieldset>
+
+        <br/>
+            <fieldset>
+            <legend> Module Selection:</legend>
+            <label>Select Semester : </label>
+            <input type="radio" name="tb7" checked/> Sem 1
+            <input type="radio" name="tb7" /> Sem 2 <br/> <br/>
+
+            <label>Select your modules </label>
+            <input type="checkbox" name="tb8" /> C++
+            <input type="checkbox" name="tb8" checked/> Java <br/> <br/>
+
+            <label>Select your major: </label>
+            <select>
+                <option> Animation</option>
+                <option> Digital Marketing</option>
+                <option> AI</option>
+                <option> Data Analysis</option>
+            </select><br/>
+            </fieldset>
+
+            <label> Give your feedback:</label>
+            <textarea name="ta" cols="20" rows="6" >
+            </textarea><br/>
+
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+            <input type="button" value="Call JS" />
+
+        </form>
+    </body>
+</html>

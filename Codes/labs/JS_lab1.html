@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS-Lab1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.writeln("<b style='color:blue;'>Hello Class</b><br/>");
+            document.write("Welcome");
+
+            var x, y;
+            x = 3.5;
+            y = 4.2;
+            document.write("Sum is : " + (x + y) + "<br/>");
+
+            var x1, y1;
+            x1 = window.prompt("Enter the first number", "4");
+            y1 = window.prompt("Enter the second number", "2");
+            document.write("Sum is : " + (parseInt(x1) + parseInt(y1)) + "<br/>");
+
+            // parseInt(), parseFloat()
+
+            window.alert("Save and Exit");
+
+            let choice = window.confirm("Do you want to open the file?");
+
+            if (choice) {
+                window.print();
+                // window.open("forms.html", "_blank");
+            } else {
+                window.close();
+            }
+        </script>
+    </body>
+</html>

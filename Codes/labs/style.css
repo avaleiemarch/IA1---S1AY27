@@ -1,0 +1,14 @@
+body { background-image:linear-gradient(pink,blue,yellow); }
+
+             a:hover {color:orange;background-color:black;} 
+
+             h2.set1 { color:orange;background-color:black;text-decoration:underline;text-align:center; }
+
+            h2.set2 { color:green;background-color:yellow;text-decoration:underline;text-align:center; }
+
+           .set3 { color:pink;background-color:black;font-style:italic; }
+
+           #set4 { color:pink;background-color:black;font-style:italic; }
+ table {border-color:red;border-width:medium;border-style:dashed;border-radius:25px; }
+
+          tr { background-color:lightyellow;color:red;font-size:14pt;font-family:Arial,Calibri;font-style:italic;}

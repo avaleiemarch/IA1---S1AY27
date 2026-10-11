@@ -1,0 +1,108 @@
+:root {
+    --primary:   #b03a5b;   
+    --accent:    #e75480;   
+    --bg:        #ffe4ec;  
+    --surface:   #ffffff;   
+    --text:      #333333;   
+
+    --font-body:    "Verdana", Geneva, sans-serif;   
+    --font-heading: "Poppins", Geneva, sans-serif;
+
+    --radius: 8px;
+    --space: 1rem;
+}
+
+
+/* ---------- 2. BASE / ELEMENT SELECTORS ---------- */
+body {
+    background-color: var(--bg);
+    font-family: var(--font-body);
+    color: var(--text);
+    margin: 0;              /* lets the nav bar reach the edges of the screen */
+    line-height: 1.6;       /* space between lines so paragraphs are easier to read */
+}
+
+/* GROUP selector - one rule styles all the headings */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+/* ELEMENT selector - medium-sized images that shrink on small screens */
+img {
+    width: 100%;
+    max-width: 350px;       /* never wider than medium size */
+    height: auto;           /* keeps the picture's proportions */
+}
+
+
+/* ---------- 3. LAYOUT ---------- */
+/* ID selector - keeps content in a centred column so lines don't stretch too wide */
+#master {
+    max-width: 900px;
+    margin: 0 auto;                         /* auto left/right centres it */
+    padding: calc(var(--space) * 2) var(--space);
+}
+
+/* Each section becomes a white card on the pink background */
+section {
+    background-color: var(--surface);
+    padding: calc(var(--space) * 1.5);
+    margin-bottom: calc(var(--space) * 1.5);
+    border-radius: var(--radius);
+}
+
+/* ID selector - centres every image inside the main content area */
+#master img {
+    display: block;         /* images are inline by default, so margin auto would not work */
+    margin: var(--space) auto;
+}
+
+
+/* ---------- 4. NAVIGATION ---------- */
+/* Bar stays stuck to the top of the screen while scrolling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--primary);
+}
+
+/* CLASS selector - flexbox puts the list items in a row instead of a column */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;            /* links wrap to a second line on small phones */
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;           /* removes the bullet points */
+    margin: 0;
+    padding: 0.6rem;
+}
+
+/* DESCENDANT selector - the links themselves */
+.nav-links a {
+    display: flex;
+    align-items: center;        /* lines the icon up with the text */
+    gap: 0.35rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius);
+    color: var(--surface);
+    text-decoration: none;
+}
+
+/* PSEUDO-CLASS selector + highlight for the page you are on */
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--accent);
+}
+
+
+
+@media (min-width: 600px) {
+    /* TODO: tablet tweaks - e.g. nav goes into one row */
+}
+
+@media (min-width: 950px) {
+    /* TODO: desktop - e.g. .home becomes two columns */
+}
